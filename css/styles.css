@@ -1,3 +1,62 @@
+/* CUSTOM PROPS */
+:root{
+  --text-color: #2b2b2b;
+  --active-color: #01e45c;
+  --bg-color: #f8f8f8;
+  --border-color: #ededed;
+
+  --font-family-main: "FS Elliot Pro", "Arial", sans-serif;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "FS Elliot Pro";
+  src: url("../fonts/FSElliotPro-Bold.woff2") format("woff2"),
+  url("../fonts/FSElliotPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FS Elliot Pro";
+  src: url("../fonts/FSElliotPro.woff2") format("woff2"),
+  url("../fonts/FSElliotPro.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FONTSPRING DEMO - Lisboa";
+  src: url("../fonts/FONTSPRINGDEMO-LisboaHeavyRegular.woff2") format("woff2"),
+  url("../fonts/FONTSPRINGDEMO-LisboaHeavyRegular.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FONTSPRING DEMO - Faber Sans Pro";
+  src: url("../fonts/FONTSPRINGDEMO-FaberSansProRegular.woff2") format("woff2"),
+  url("../fonts/FONTSPRINGDEMO-FaberSansProRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FONTSPRING DEMO - Lisboa";
+  src: url("../fonts/FONTSPRINGDEMO-LisboaBold.woff2") format("woff2"),
+  url("../fonts/FONTSPRINGDEMO-LisboaBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,11 +76,12 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: "FS Elliot Pro", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
   background-color: #fff;
-  color: #222;
+  color: #2b2b2b;
 }
 
 img {
@@ -40,9 +100,9 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border-color: transparent;
-  -webkit-text-fill-color: inherit;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+border-color: transparent;
+-webkit-text-fill-color: inherit;
+-webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }*/
 
 
@@ -51,8 +111,8 @@ select:-webkit-autofill:focus {
 ::-moz-placeholder,
 :-ms-input-placeholder,
 :-moz-placeholder {
-  color: rgba(52, 49, 61, 0.5);
-  opacity: 1;
+color: rgba(52, 49, 61, 0.5);
+opacity: 1;
 }*/
 
 
@@ -72,7 +132,7 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
@@ -85,6 +145,212 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
 }
 
+.site-header {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__logo {
+  font-family: "FONTSPRING DEMO - Lisboa";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 24px;
+  margin-right: 71px;
+}
+
+.logo__link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.site-header__nav {
+  margin-right: 106px;
+}
+
+.nav__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--text-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav__link-active {
+  color: var(--active-color);
+}
+
+.nav__link:hover {
+  opacity: 0.8;;
+}
+
+.site-header__transfer {
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  padding: 20px 16px 21px 25px;
+}
+
+.transfer__link {
+  position: relative;
+}
+
+.transfer__count {
+  position: absolute;
+  top: -22px;
+  right: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  background-color: var(--active-color);
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--font-family-main);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 100%;
+}
+
+.transfer__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.global-search-form {
+  border-right: 1px solid var(--border-color);
+}
+
+.global-search-form-input {
+  width: 420px;
+  height: 77px;
+  border: 0;
+  padding: 25px 0 25px 63px;
+  font-family: "FONTSPRINGDEMO-FaberSansProRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+  background-image: url(../img/loupe.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 15px center;
+}
+
+/* HERO */
+.hero {
+  min-height: 500px;
+  padding-top: 146px;
+  padding-bottom: 158px;
+  background-color: var(--bg-color);
+  background-image: url(../img/hero-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 51%;
+  background-position: right center;
+}
+
+.hero__info{
+  width: 100%;
+  max-width: 515px;
+}
+
+.hero__title {
+  padding: 0;
+  margin: 0;
+  font-family: "FONTSPRING DEMO - Lisboa", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+
+.hero__text {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+
+/* ADVANTAGES */
+.advantages {
+  padding-top: 52px;
+  padding-bottom: 60px;
+}
+
+.advantages__heading {
+  padding: 0;
+  margin: 0;
+  font-family: "FONTSPRINGDEMO-LisboaBold", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages__item{
+  max-width: 340px;
+}
+
+.advantages__item:not(:last-child) {
+  margin-right: 70px;
+}
+
+.advantages__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.advantages__title {
+  padding: 0;
+  padding-left: 31px;
+  margin: 0;
+  font-family: "FSElliotPro-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.advantages__text {
+  margin: 0;
+  padding: 0;
+  font-family: "FSElliotPro", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7e7e7e;
+}
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -92,5 +358,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-
+  .hero {
+    background-image: url(../img/hero-bg@2x.png)
 }

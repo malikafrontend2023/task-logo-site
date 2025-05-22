@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Logo</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -12,7 +12,90 @@
 </head>
 <body>
 
+<!-- SITE-HEADER -->
+<div class="site-header">
+  <div class="container site-header__container">
+    <div class="site-header__logo logo">
+      <a class="logo__link" href="#">Logo</a>
+    </div>
 
+    <!-- SITENAV -->
+    <nav class="site-header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link nav__link-active" href="#">Курсы</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Школы</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Отзывы о школах</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Акции школ</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Блог</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="site-header__transfer transfer">
+      <a class="transfer__link" href="#">
+        <span class="transfer__count">3</span>
+        <svg class="transfer__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"><g clip-path="url(#a)"><path fill="#2B2B2B" d="m27.707 10.293-7-7A1 1 0 0 0 19 4v3h-7a1 1 0 0 0 0 2h8a1 1 0 0 0 1-1V6.414L25.586 11 21 15.586V14a1 1 0 0 0-1-1H9v-3a1 1 0 0 0-1.707-.707l-7 7a1 1 0 0 0 0 1.414l7 7A1 1 0 0 0 9 24v-3h7a1 1 0 1 0 0-2H8a1 1 0 0 0-1 1v1.586L2.414 17 7 12.414V14a1 1 0 0 0 1 1h11v3a1 1 0 0 0 1.707.707l7-7a1 1 0 0 0 0-1.414Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h28v28H0z"/></clipPath></defs></svg>
+      </a>
+    </div>
+
+    <!--GLOBAL-SEARCH -->
+    <form class="global-search-form" action="https://echo.htmlacademy.ru" method="get">
+      <input class="global-search-form-input" type="search" name="search" placeholder="Искать курсы" aria-label="Искать курсы" required="">
+    </form>
+  </div>
+</div>
+
+<main class="main">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__info">
+        <h1 class="hero__title">Агрегатор онлайн курсов</h1>
+      <p class="hero__text">Сравниваем онлайн-курсы по digital и IT. <br>Мы — каталог-отзовик курсов. Выбирайте курсы по отзывам, цене, продолжительности и другим критериям!</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ADVANTAGES -->
+  <section class="advantages">
+    <div class="advantages__container container">
+      <h2 class="advantages__heading">Наши преимущества</h2>
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <div class="advantages__info">
+          <img class="advantages__img" src="img/video-player1.svg" alt="">
+          <h3 class="advantages__title">Большой выбор <br> онлайн-курсов</h3>
+        </div>
+          <p class="advantages__text">Мы аккумулируем большое количество онлайн-курсов по различным направлениям,  позволяя сравнивать их, и выбирать то, что вам нравится</p>
+      </li>
+      <li class="advantages__item">
+        <div class="advantages__info">
+          <img class="advantages__img" src="img/search.svg" alt="">
+          <h3 class="advantages__title">Актуальная информация</h3>
+        </div>
+          <p class="advantages__text">Мы регулярно обновляем наши базы данных,  чтобы предоставлять вам только самую свежую информацию о новых курсах, старте обучения,  скидках и предложениях от онлайн-школ</p>
+      </li></li>
+      <li class="advantages__item">
+        <div class="advantages__info">
+          <img class="advantages__img" src="img/video-player.svg" alt="">
+          <h3 class="advantages__title">Скорость <br> поиска</h3>
+        </div>
+          <p class="advantages__text">Агрегатор курсов создан для экономии вашего времени.  Вы можете с легкостью найти подходящий курс в нашем каталоге по различным фильтрам</p>
+      </li></li>
+    </ul>
+    </div>
+  </section>
+</main>
 
   <script src="js/main.js"></script>
 </body>
